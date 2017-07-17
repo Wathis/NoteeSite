@@ -8,14 +8,19 @@ session_start();
     <meta charset="UTF-8">
     <title>Notee</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-
     <div class="menu">
 
         <div class="titleNotee">Notee</div>
-        <a href="index.html" class="">Accueil</a>
-        <a href="#" class="">Contact</a>
+        <div class="accueil">
+            <a href="index.php" id="lienIndex">Accueil</a>
+            <div class="arrow-up"></div>
+        </div>
+        <div class="contact">
+            <a href="contact.php" class="">Contact</a>
+        </div>
     </div>
 
     <div class="landingPage">
@@ -34,7 +39,7 @@ session_start();
 
             <form action="formulaireAdresseMail.php" class="formulaireAdresseMail" method="post">
                 <input name="userEmail" type="email" class="enterEmail" placeholder="Votre adresse mail">
-                <input type="submit" value="OBTENIR">
+                <input type="submit" class="obtenir" value="OBTENIR">
             </form>
             <?php
                 if (isset($_SESSION["error"])) {
@@ -47,11 +52,8 @@ session_start();
                     }
                 }
             ?>
-
         </div>
-
     </div>
-
 
 </body>
 </html>

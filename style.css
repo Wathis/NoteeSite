@@ -13,8 +13,9 @@
     src: url(HelveticaNeue-CondensedBold.otf);
 }
 
-.body {
+body {
     color: white;
+    margin: 0px;
 }
 
 .menu {
@@ -22,7 +23,6 @@
     height: 60px;
     display: flex;
     align-items: center;
-    margin: -10px;
     font-family: helveticaCondensedBlack;
     justify-content : flex-end;
     flex-direction: row;
@@ -36,12 +36,17 @@
     margin-left: 20px;
 }
 
-.menu a {
+.accueil, .contact {
     font-family: helveticaBold;
     flex-grow: 2;
     color :white;
     font-size: 18px;
     text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color:white;
 }
 
 div {
@@ -53,10 +58,7 @@ html {
 }
 
 .landingPage {
-    margin:-10px;
-    margin-top: 10px;
     height: 92vh;
-
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -106,7 +108,7 @@ html {
     color : #89F5E7;
 }
 
-.enterEmail {
+input {
     width: 300px;
     height: 45px;
     font-family: "Helvetica Neue";
@@ -117,12 +119,27 @@ html {
     border-radius: 10px;
     border-style: none;
     margin-bottom: 40px;
+}
+
+.enterEmail {
     -webkit-box-shadow: 10px 9px 54px -16px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 9px 54px -16px rgba(0,0,0,0.75);
     box-shadow: 10px 9px 54px -16px rgba(0,0,0,0.75);
 }
 
-::-webkit-input-placeholder {
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #95989A;
+    opacity: 0.5 !important; /* for older chrome versions. may no longer apply. */
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #95989A;
+    opacity: 0.5 !important; /* for older chrome versions. may no longer apply. */
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #95989A;
+    opacity: 0.5 !important; /* for older chrome versions. may no longer apply. */
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
     color: #95989A;
     opacity: 0.5 !important; /* for older chrome versions. may no longer apply. */
 }
@@ -137,6 +154,12 @@ textarea:focus, input:focus{
     outline: none;
 }
 
+.obtenir {
+    -webkit-box-shadow: 10px 9px 54px -16px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 9px 54px -16px rgba(0,0,0,0.75);
+    box-shadow: 10px 9px 54px -16px rgba(0,0,0,0.75);
+}
+
 input[type=submit] {
     width: 200px;
     height: 40px;
@@ -148,11 +171,63 @@ input[type=submit] {
     font-family: "Helvetica";
     font-weight: bold;
     letter-spacing: 1px;
-    -webkit-box-shadow: 10px 9px 54px -16px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 9px 54px -16px rgba(0,0,0,0.75);
-    box-shadow: 10px 9px 54px -16px rgba(0,0,0,0.75);
 }
 
+.arrow-up {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 0px;
+    height: 0px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+}
+
+.contactDiv {
+    background-color: #dcdde1;
+    height: 100vh;
+}
+
+.enterEmailContact {
+    width: 300px;
+    height: 45px;
+    font-family: "Helvetica Neue";
+    font-size: 20px;
+    color: #515459;
+    text-align:justify;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+    border-style: none;
+    margin-bottom : 20px;
+    -webkit-box-shadow: 3px 1px 35px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 1px 35px -10px rgba(0,0,0,0.75);
+    box-shadow: 3px 1px 35px -10px rgba(0,0,0,0.75);
+}
+
+.enterMessageContact {
+    width: 300px;
+    height: 200px;
+    background-color: white;
+    padding: 15px;
+    font-family: "Helvetica Neue";
+    font-size: 20px;
+    color: #515459;
+    font-size: 20px;
+    border-radius: 10px;
+    resize: none;
+    border-style: none;
+    -webkit-box-shadow: 3px 1px 35px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 1px 35px -10px rgba(0,0,0,0.75);
+    box-shadow: 3px 1px 35px -10px rgba(0,0,0,0.75);
+}
+
+.contacter {
+    -webkit-box-shadow: 3px 1px 35px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 1px 35px -10px rgba(0,0,0,0.75);
+    box-shadow: 3px 1px 35px -10px rgba(0,0,0,0.75);
+}
 
 @media (max-width: 600px) {
     .landingPageGauche {
