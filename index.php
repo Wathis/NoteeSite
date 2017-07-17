@@ -1,3 +1,7 @@
+<?php
+// Start the session
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,10 +32,21 @@
 
             <div class="messageNotee">Avec <span class="wordNotee">Notee</span>, consultez de<br /> nombreuses fiches de <br /> révisions par matières</div>
 
-            <form action="send.php" class="formulaireAdresseMail" method="post">
+            <form action="formulaireAdresseMail.php" class="formulaireAdresseMail" method="post">
                 <input name="userEmail" type="email" class="enterEmail" placeholder="Votre adresse mail">
                 <input type="submit" value="OBTENIR">
             </form>
+            <?php
+                if (isset($_SESSION["error"])) {
+                    $error =  $_SESSION["error"];
+                    if ($error == "valide") {
+                        echo "<br /> Email sauvegardé";
+                        session_unset();
+                    } else {
+                        echo $error . ' zd';
+                    }
+                }
+            ?>
 
         </div>
 
