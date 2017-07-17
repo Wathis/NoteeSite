@@ -31,6 +31,9 @@ session_start();
 
     <div class="contactDiv">
 
+
+        <div class="nousContacter">Nous contacter</div>
+
         <form action="" method="post" class="formulaireAdresseMail">
 
             <input name="userEmail" type="email" class="enterEmailContact" placeholder="Votre adresse mail">

@@ -28,11 +28,11 @@ if (isset($_POST["userEmail"])) {
             exit;
         }
     } else {
-        $_SESSION["error"] = "Veuillez rentrer l'adresse mail";
+        $_SESSION["error"] = "<br /> Veuillez renseigner l'adresse mail";
     }
     header('Location: ../index.php');
     exit;
 
 } else {
-    echo "Erreur, vous avez oublié de rentrer l'email";
+    echo "<br />Erreur, vous avez oublié de renseigner l'email";
 }

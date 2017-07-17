@@ -118,7 +118,6 @@ input {
     margin-top: 50px;
     border-radius: 10px;
     border-style: none;
-    margin-bottom: 40px;
 }
 
 .enterEmail {
@@ -171,6 +170,7 @@ input[type=submit] {
     font-family: "Helvetica";
     font-weight: bold;
     letter-spacing: 1px;
+
 }
 
 .arrow-up {
@@ -187,6 +187,9 @@ input[type=submit] {
 .contactDiv {
     background-color: #dcdde1;
     height: 100vh;
+    display : flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .enterEmailContact {
@@ -227,6 +230,15 @@ input[type=submit] {
     -webkit-box-shadow: 3px 1px 35px -10px rgba(0,0,0,0.75);
     -moz-box-shadow: 3px 1px 35px -10px rgba(0,0,0,0.75);
     box-shadow: 3px 1px 35px -10px rgba(0,0,0,0.75);
+}
+
+.nousContacter {
+    margin-top: 30px;
+    margin-bottom: -10px;
+    font-family: helveticaCondensedBlack;
+    font-size: 50px;
+    color:  #515459;
+
 }
 
 @media (max-width: 600px) {
