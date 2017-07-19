@@ -14,6 +14,7 @@ session_start();
     <meta charset="UTF-8">
     <title>Notee</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../img/logo-site.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
@@ -43,6 +44,14 @@ session_start();
         </form>
 
     </div>
+
+     <footer>
+
+
+        <div class="footer-copyright">
+            <a href="http://wathis.jimdo.com" target="_blank">©Copyright Wathis 2017</a>
+        </div>
+    </footer>
 
 </body>
 </html>

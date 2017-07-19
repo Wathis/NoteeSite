@@ -72,7 +72,7 @@ html {
 
 .landingPageGauche {
     height: 92vh;
-    flex-grow: 6;
+    flex-grow: 9;
     opacity: 0;
     display: flex;
     justify-content: center;
@@ -81,7 +81,7 @@ html {
 }
 
 .landingPageDroite {
-    flex-grow: 15;
+    flex-grow: 10;
     height: 92vh;
     display: flex;
     flex-direction: column;
@@ -319,12 +319,17 @@ footer {
     background-color: #515459;
     height: 100px;
     color : white;
-    font-family: helveticaCondensedBold;
+    font-family: "Helvetica";
     font-size: 20px;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border-top: 4px solid white;
+}
+
+#logo-document, #logo-podium,#logo-network,#message-document,#message-network,#message-podium {
+    opacity: 0;
 }
 
 @media (max-width: 600px) {
@@ -339,8 +344,4 @@ footer {
     .information {
         font-size: 35px;
     }
-}
-
-#logo-document, #logo-podium,#logo-network,#message-document,#message-network,#message-podium {
-    opacity: 0;
 }

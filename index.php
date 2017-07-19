@@ -1,5 +1,4 @@
 <?php
-// Start the session
 session_start();
 ?>
 <!DOCTYPE html>
@@ -10,6 +9,8 @@ session_start();
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/index.js"></script>
+    <link rel="icon" href="./img/logo-site.png">
+    <link href="https://fonts.googleapis.com/css?family=Doppio+One" rel="stylesheet">
 </head>
 <body>
     <div class="menu">
@@ -59,7 +60,7 @@ session_start();
 
         <div class="first-information">
             <div class="left-part">
-                <img src="../img/document_logo.svg" alt="document" height="100" id="logo-document" class="logo-info">
+                <img src="./img/document_logo.svg" alt="document" height="100" id="logo-document" class="logo-info">
             </div>
 
             <div class="right-part">
@@ -74,14 +75,14 @@ session_start();
             </div>
 
             <div class="right-part">
-                <img id="logo-network" src="../img/network_logo.svg" alt="document" height="100" class="logo-info">
+                <img id="logo-network" alt="network" src="./img/network_logo.svg" alt="document" height="100" class="logo-info">
             </div>
         </div>
 
 
         <div class="third-information">
             <div class="left-part">
-                <img id="logo-podium" src="../img/podium_logo.svg" alt="document" height="100" class="logo-info">
+                <img id="logo-podium" alt="podium" src="./img/podium_logo.svg" alt="document" height="100" class="logo-info">
             </div>
 
             <div class="right-part">
@@ -96,8 +97,7 @@ session_start();
 
 
         <div class="footer-copyright">
-            Site web réalisé par <a href="http://wathis.jimdo.com" target="_blank">Mathis DELAUNAY</a><br />
-            ©Copyright Wathis 2017
+            <a href="http://wathis.jimdo.com" target="_blank">©Copyright Wathis 2017</a>
         </div>
 
     </footer>
