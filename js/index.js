@@ -23,10 +23,10 @@ $(window).scroll(function() {
 $(document).ready(function() {
     $("#landingPageGauche").animate({
         opacity : 1
-    }, 500);
+    }, 0);
     window.setTimeout(function () {
         $("#landingPageDroite").animate({
             opacity : 1
-        }, 500);
-    },800);
+        }, 0);
+    },0);
 });

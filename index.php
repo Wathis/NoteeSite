@@ -28,7 +28,7 @@ session_start();
 
         <div id="landingPageGauche" class="landingPageGauche">
 
-            <img src="../img/iPhoneTopSVG.svg" alt="Salut" class="photoiPhone">
+            <img src="./img/iPhoneNotee.svg" alt="Salut" class="photoiPhone">
 
             <p class="bientotDisponible">Bientôt sur l'AppStore</p>
         </div>
