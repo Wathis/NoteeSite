@@ -68,9 +68,12 @@ html {
     background-size: cover;
 }
 
+
+
 .landingPageGauche {
     height: 92vh;
     flex-grow: 6;
+    opacity: 0;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -84,6 +87,7 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    opacity: 0;
 }
 
 .bientotDisponible {
@@ -335,4 +339,8 @@ footer {
     .information {
         font-size: 35px;
     }
+}
+
+#logo-document, #logo-podium,#logo-network,#message-document,#message-network,#message-podium {
+    opacity: 0;
 }

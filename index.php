@@ -7,8 +7,9 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <title>Notee</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/index.js"></script>
 </head>
 <body>
     <div class="menu">
@@ -25,15 +26,14 @@ session_start();
 
     <div class="landingPage">
 
-        <div class="landingPageGauche">
+        <div id="landingPageGauche" class="landingPageGauche">
 
             <img src="../img/iPhoneTopSVG.svg" alt="Salut" class="photoiPhone">
 
             <p class="bientotDisponible">Bientôt sur l'AppStore</p>
-
         </div>
 
-        <div class="landingPageDroite">
+        <div id="landingPageDroite" class="landingPageDroite">
 
             <div class="messageNotee">Avec <span class="wordNotee">Notee</span>, consultez de<br /> nombreuses fiches de <br /> révisions par matières</div>
 
@@ -59,33 +59,33 @@ session_start();
 
         <div class="first-information">
             <div class="left-part">
-                <img src="../img/document_logo.svg" alt="document" height="100" class="logo-info">
+                <img src="../img/document_logo.svg" alt="document" height="100" id="logo-document" class="logo-info">
             </div>
 
             <div class="right-part">
-                <div class="message-information">Mettez en ligne vos fiches de <br /> révision ou prise de note</div>
+                <div id="message-document" class="message-information">Mettez en ligne vos fiches de <br /> révision ou prise de note</div>
             </div>
         </div>
 
 
         <div class="second-information">
             <div class="left-part">
-                <div class="message-information-milieu">Consultez les fiches ajoutées <br />récement par vos amis</div>
+                <div id="message-network" class="message-information-milieu">Consultez les fiches ajoutées <br />récement par vos amis</div>
             </div>
 
             <div class="right-part">
-                <img src="../img/network_logo.svg" alt="document" height="100" class="logo-info">
+                <img id="logo-network" src="../img/network_logo.svg" alt="document" height="100" class="logo-info">
             </div>
         </div>
 
 
         <div class="third-information">
             <div class="left-part">
-                <img src="../img/podium_logo.svg" alt="document" height="100" class="logo-info">
+                <img id="logo-podium" src="../img/podium_logo.svg" alt="document" height="100" class="logo-info">
             </div>
 
             <div class="right-part">
-                <div class="message-information">Accédez aux meilleurs fiches <br/> de révisions du moment</div>
+                <div id="message-podium" class="message-information">Accédez aux meilleurs fiches <br/> de révisions du moment</div>
             </div>
         </div>
 
