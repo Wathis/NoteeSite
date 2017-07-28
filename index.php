@@ -2,7 +2,7 @@
 session_start();
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>Notee</title>
@@ -15,6 +15,16 @@ session_start();
 </head>
 
 <body>
+
+    <div class="navBarMobile" >
+        <div class="itemNav is-active">
+            <div class="accueilShortcut">dqzdqzd</div>
+        </div>
+
+        <div class="itemNav">
+            <div class="contactShortcut">qzdqzd</div>
+        </div>
+    </div>
 
     <div class="menu">
 
@@ -93,16 +103,6 @@ session_start();
             </div>
         </div>
 
-    </div>
-
-     <div class="navBarMobile">
-        <div class="itemNav is-active">
-            <div>ACCUEIL</div>
-        </div>
-
-        <div class="itemNav">
-            <div>CONTACT</div>
-        </div>
     </div>
 
     <footer>
