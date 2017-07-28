@@ -20,6 +20,13 @@ $(window).scroll(function() {
     }
 })
 
+
+
+$('.itemNav').click(function(){
+    alert("");
+    // $(this).addClass('is-active').siblings().removeClass('is-active');
+});
+
 $(document).ready(function() {
     $("#landingPageGauche").animate({
         opacity : 1

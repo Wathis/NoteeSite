@@ -10,9 +10,12 @@ session_start();
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/index.js"></script>
     <link rel="icon" href="./img/logo-site.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Doppio+One" rel="stylesheet">
 </head>
+
 <body>
+
     <div class="menu">
 
         <div class="titleNotee">Notee</div>
@@ -92,9 +95,17 @@ session_start();
 
     </div>
 
+     <div class="navBarMobile">
+        <div class="itemNav is-active">
+            <div>ACCUEIL</div>
+        </div>
+
+        <div class="itemNav">
+            <div>CONTACT</div>
+        </div>
+    </div>
 
     <footer>
-
 
         <div class="footer-copyright">
             <a href="http://wathis.jimdo.com" target="_blank">©Copyright Wathis 2017</a>
