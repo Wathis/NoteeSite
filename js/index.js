@@ -1,5 +1,7 @@
 var animationDone = false
 $(window).scroll(function() {
+
+    $('.navBarMobile').css('position' , 'fixed');
     var heightOfScreen = $(window).height();
     var scrollHeight = $(window).scrollTop();
     if (scrollHeight * 1.7 >= heightOfScreen && !animationDone) {
@@ -20,14 +22,11 @@ $(window).scroll(function() {
     }
 })
 
-
-
-$('.itemNav').click(function(){
-    alert("");
-    // $(this).addClass('is-active').siblings().removeClass('is-active');
-});
-
 $(document).ready(function() {
+
+    $(".container").css("visibility","visible");
+    $(".loaderContainer").css("display","none");
+
     $("#landingPageGauche").animate({
         opacity : 1
     }, 1000);

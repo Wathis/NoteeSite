@@ -18,6 +18,7 @@
 
 body {
   margin: 0px;
+  color: white;
 }
 
 .menu {
@@ -36,21 +37,6 @@ body {
   font-size: 40px;
   flex-grow: 20;
   margin-left: 20px;
-  background-color: red;
-}
-
-.titleNotee:hover {
-  animation: animationText;
-}
-
-@keyframes animationTest {
-  0% {
-    background-color: blue;
-  }
-
-  100% {
-    background-color: green;
-  }
 }
 
 .accueil, .contact {
@@ -68,6 +54,10 @@ a {
 
 html {
   overflow-x: hidden;
+}
+
+.container {
+   visibility: hidden;
 }
 
 .landingPage {
@@ -208,6 +198,25 @@ input[type=submit] {
   border-bottom: 10px solid white;
 }
 
+.formulaireDeContact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formulaireDeContact > input[type=submit] {
+  width: 200px;
+  height: 50px;
+  background-color: gray;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  border-style: none;
+  font-family: "Helvetica";
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
 .contactDiv {
   background-color: #dcdde1;
   height: 100vh;
@@ -228,9 +237,6 @@ input[type=submit] {
   border-radius: 10px;
   border-style: none;
   margin-bottom: 20px;
-  -webkit-box-shadow: 3px 1px 35px -10px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 3px 1px 35px -10px rgba(0, 0, 0, 0.75);
-  box-shadow: 3px 1px 35px -10px rgba(0, 0, 0, 0.75);
 }
 
 .enterMessageContact {
@@ -245,15 +251,11 @@ input[type=submit] {
   border-radius: 10px;
   resize: none;
   border-style: none;
-  -webkit-box-shadow: 3px 1px 35px -10px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 3px 1px 35px -10px rgba(0, 0, 0, 0.75);
-  box-shadow: 3px 1px 35px -10px rgba(0, 0, 0, 0.75);
 }
 
-.contacter {
-  -webkit-box-shadow: 3px 1px 35px -10px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 3px 1px 35px -10px rgba(0, 0, 0, 0.75);
-  box-shadow: 3px 1px 35px -10px rgba(0, 0, 0, 0.75);
+.contacter:hover {
+  opacity: 0.8;
+  transition: opacity .25s;
 }
 
 .nousContacter {
@@ -343,14 +345,6 @@ footer {
   justify-content: center;
   border-top: 4px solid white;
 }
-/*
-.contactShortcut {
-  background-image: url("../img/email.svg");
-}
-
-.accueilShortcut {
-  background-image: url("../img/home.svg");
-}*/
 
 .navBarMobile {
   display: none;
@@ -358,6 +352,48 @@ footer {
 
 #logo-document, #logo-podium, #logo-network, #message-document, #message-network, #message-podium {
   opacity: 0;
+}
+
+.loaderContainer {
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  background-color: #95a5a6;
+  border-radius: 50%;
+  position: relative;
+}
+
+.loader:after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  top: -4px;
+  left: 0px;
+  height: 50px;
+  border-radius: 50%;
+  border-top: 4px solid #2c3e50;
+  border-bottom: 4px solid #2c3e50;
+    animation: tourner 1s linear infinite;
+}
+
+@keyframes tourner {
+  0% {
+    transform : rotate(0deg) scale(1.2);
+  }
+  50% {
+    transform : rotate(180deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1.2);
+  }
 }
 
 @media (max-width: 800px) {
@@ -368,12 +404,25 @@ footer {
     height: 60px;
     flex-direction: row;
     opacity: 1;
-    position: fixed;
-    bottom: 0;
+    position: absolute;
+    bottom: 0px;
     width: 100%;
+    animation: moveNavBar 500ms;
     -webkit-box-shadow: -1px -2px 23px -4px rgba(0,0,0,0.75);
     -moz-box-shadow: -1px -2px 23px -4px rgba(0,0,0,0.75);
     box-shadow: -1px -2px 23px -4px rgba(0,0,0,0.75);
+  }
+
+  @keyframes moveNavBar {
+    0% {
+      bottom: -200px;
+    }
+    50% {
+      bottom: 10px;
+    }
+    100% {
+      bottom: 0px;
+    }
   }
 
   .itemNav {
@@ -386,30 +435,31 @@ footer {
   }
 
   .itemNav > div {
-    margin-top: 20px;
+    margin-top: 13px;
     cursor: pointer;
     text-align: center;
+    animation: 
   }
 
   .is-active {
-    border-bottom: solid 5px #62D8C9; 
+    border-bottom: solid 5px #62D8C9;
     background-color: #515459;
-    animation: fade 500ms ease-in-out;
-  }
-
-  @keyframes fade {
-    0% {
-      border-bottom-color: #515459; 
-      background-color: #707070;
-    }
-    100% {
-      border-bottom-color: #62D8C9; 
-      background-color: #515459;
-    }
   }
 
   .titleNotee {
+    position: absolute;
+    animation: moveTitle 500ms;
     text-align: center;
+    left: 30%;
+  }
+
+  @keyframes moveTitle {
+    from {
+      left : 0%;
+    }
+    to {
+      left: 30%;
+    }
   }
 
   .accueil, .contact {
@@ -430,5 +480,8 @@ footer {
   }
   .information {
     font-size: 30px !important;
+  }
+  footer {
+    margin-bottom: 50px;
   }
 }
